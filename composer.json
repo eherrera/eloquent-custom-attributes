@@ -1,5 +1,5 @@
 {
-  "name": "fhteam/eloquent-custom-attributes",
+  "name": "eherrera/eloquent-custom-attributes",
   "description": "Custom attribute handling for Laravel's Eloquent ORM",
   "minimum-stability": "stable",
   "license": "GPL-2.0",
