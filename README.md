@@ -1,4 +1,4 @@
-eloquent-custom-attributes [![Code Climate](https://codeclimate.com/github/fhteam/eloquent-custom-attributes/badges/gpa.svg)](https://codeclimate.com/github/fhteam/eloquent-custom-attributes) [![Laravel compatibility](https://img.shields.io/badge/laravel-4-green.svg)](http://laravel.com/) [![Laravel compatibility](https://img.shields.io/badge/laravel-5-green.svg)](http://laravel.com/)
+eloquent-custom-attributes  [![Laravel compatibility](https://img.shields.io/badge/laravel-4-green.svg)](http://laravel.com/) [![Laravel compatibility](https://img.shields.io/badge/laravel-5-green.svg)](http://laravel.com/)
 ============
 
 This small library allows you to define custom (virtual) attributes on Eloquent models and use them to interact (or not,
@@ -7,7 +7,7 @@ if you so choose) with real ones.
 Installation
 ------------
 
- - Simple composer installation is ok: ```composer require fhteam/eloquent-custom-attributes:dev-master ```
+ - Simple composer installation is ok: ```composer require eherrera/eloquent-custom-attributes:dev-master ```
  (set version requirement to your favourite)
  
 Usage
