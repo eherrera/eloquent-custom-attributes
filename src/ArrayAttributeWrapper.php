@@ -2,7 +2,7 @@
 
 namespace FHTeam\EloquentCustomAttrs;
 
-use Arr;
+use Illuminate\Support\Arr;
 use ArrayAccess;
 use ArrayIterator;
 use Countable;
