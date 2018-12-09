@@ -33,7 +33,7 @@ trait JsonAttrHandlerTrait
 
     /**
      * @param string $key
-     * @param mixed  $value
+     * @param mixed $value
      *
      * @return void
      */
@@ -57,11 +57,11 @@ trait JsonAttrHandlerTrait
      * Wrapper for JSON decode that implements error detection with helpful
      * error messages.
      *
-     * @param string $json    JSON data to parse
-     * @param bool   $assoc   When true, returned objects will be converted
+     * @param string $json JSON data to parse
+     * @param bool $assoc When true, returned objects will be converted
      *                        into associative arrays.
-     * @param int    $depth   User specified recursion depth.
-     * @param int    $options Bitmask of JSON decode options.
+     * @param int $depth User specified recursion depth.
+     * @param int $options Bitmask of JSON decode options.
      *
      * @return mixed
      * @throws InvalidArgumentException if the JSON cannot be parsed.
@@ -69,6 +69,9 @@ trait JsonAttrHandlerTrait
      */
     protected function exceptionalJsonDecode($json, $assoc = false, $depth = 512, $options = 0)
     {
+        if ($json === null || $json === '') {
+            return null;
+        }
         static $jsonErrors = [
             JSON_ERROR_DEPTH => 'JSON_ERROR_DEPTH - Maximum stack depth exceeded',
             JSON_ERROR_STATE_MISMATCH => 'JSON_ERROR_STATE_MISMATCH - Underflow or the modes mismatch',
@@ -83,7 +86,7 @@ trait JsonAttrHandlerTrait
             $last = json_last_error();
             throw new InvalidArgumentException(
                 'Unable to parse JSON data: '
-                .(isset($jsonErrors[$last])
+                . (isset($jsonErrors[$last])
                     ? $jsonErrors[$last]
                     : 'Unknown error')
             );
